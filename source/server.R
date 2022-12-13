@@ -1,9 +1,17 @@
-
+#
+# This is the server logic of a Shiny web application. You can run the
+# application by clicking 'Run App' above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
 library(shiny)
 library(dplyr)
 library(plotly)
 
-co2_df <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv")
+co2_df <- read.csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv") %>%
+  filter(population != "NA", iso_code != "")
 
 
 #What is the average value of CO2_consumption in 2018 across all counties. 

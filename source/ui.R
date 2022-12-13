@@ -30,14 +30,14 @@ plot <- tabPanel("Visualization", titlePanel("CO2 Consumption Across Different Y
         label = "Select Year",
         min = min(co2_df$year),
         max = max(co2_df$year),
-        value = c(2010, 2020)
+        value = c(1990, 2020)
       ),
 
       selectizeInput(
         inputId = "country_name",
         label = "Select country",
         choices = co2_df$country,
-        selected = "America",
+        selected = "Australia",
         )
     ),
     
